@@ -1,0 +1,46 @@
+.container {
+    border: 8px solid black;
+    display: grid;
+    grid-template-columns: [inline-start] 200px [inline-2] 1fr [inline-end];
+    grid-template-rows: [block-start] 1fr [block-2] 400px [block-3] 100px [block-end];
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+    block-size: 100vh; /*Length units representing a percentage of the current viewport dimensions: width (vw), height (vh), the smaller of the two (vmin), or the larger of the two (vmax).*/
+
+
+    /* gap: 40px; */
+    row-gap: 20px;
+    column-gap: 8px;
+
+    
+}
+
+.item {
+    border: 5px solid red;
+    counter-increment: item;
+}
+
+.item::before {
+    content: counter(item);
+}
+
+
+.item:nth-of-type(1) {
+    grid-area: header;
+
+}
+
+.item:nth-of-type(2){
+    border-color: blue;
+    grid-area: sidebar;
+
+}
+
+.item:nth-of-type(3){
+    border-color: green;
+    grid-area: main;
+}
+
+.item:nth-of-type(4){
+    grid-area: footer;
+    margin-block-start:40px ;
+}

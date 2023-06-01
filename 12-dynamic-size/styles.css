@@ -1,0 +1,21 @@
+.container {
+    border: 8px solid black;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: [block-start] 1fr [block-2] 400px [block-3] 100px [block-end];
+    gap: 2rem;
+
+
+    
+}
+
+.item {
+    border: 5px solid red;
+    counter-increment: item;
+}
+
+.item::before {
+    content: counter(item);
+}
+
+
