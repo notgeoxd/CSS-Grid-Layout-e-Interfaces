@@ -1,0 +1,74 @@
+input[id="list"]:checked ~ .project-list{
+    border: 10px solid green
+}
+
+input[id="list"]:checked ~ .project-list .project{
+    border: 1px solid salmon;
+
+    display: grid; /* te proporciona una cuadrícula de una sola column*/
+    grid-template-columns: 50px 1fr 100px 100px; /*sirve para definir el número de columnas que tendrá nuestra rejilla, así como los tamaños asignados a cada una*/
+
+    gap: 1rem; /*espasios entre elementos*/
+    padding: 1rem; /*relleno*/
+    align-items: center; /*alinear objetos*/
+
+}
+input[id="list"]:checked ~ .project-list .project img{
+    inline-size: 50px;
+    aspect-ratio: 1/1; 
+    object-fit: cover;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+input[id="grid"]:checked ~ .project-list{
+    border: 10px solid blue;
+}
+
+.project-list {
+    padding: 1rem;
+}
+
+
+input[id="list"]:checked ~ .project-actions [for="list"] ,
+input[id="grid"]:checked ~ .project-actions [for="grid"] {
+    background-color: rebeccapurple;
+}
+
+input {
+    display: none;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.project-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+label {
+    border: 1px solid red;
+    cursor: pointer;
+    user-select: none;
+    padding: 1rem;
+}
+
+
